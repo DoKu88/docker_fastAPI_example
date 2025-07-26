@@ -1,0 +1,13 @@
+version: '3'
+services:
+  main:
+    build:
+      context: ./main_container
+    depends_on:
+      - manip_seg
+
+  manip_seg:
+    build:
+      context: ./manip_seg
+    ports:
+      - "8000:8000"
